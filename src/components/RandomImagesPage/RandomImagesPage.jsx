@@ -27,7 +27,7 @@ const RandomImagesPage = () => {
     const nextIndex = selectedImageIndex + 1;
     setSelectedImageIndex(nextIndex);
     console.log(selectedImageIndex);
-    
+    setIsLiked(false)
     localStorage.setItem('previousImages', JSON.stringify([...previos,{
         isLiked:isLiked,
         selectedImage
@@ -44,16 +44,17 @@ const RandomImagesPage = () => {
   };
 
   const handleLikeClick = () => {
+
     if (!isLiked) {
       let updatedLikes = likes ;
       updatedLikes++
-    
+     
       setLikes(updatedLikes);
       localStorage.setItem(`likes`, updatedLikes);
       setIsLiked(true);
     } else {
-        let updatedLikes = likes ;
-        updatedLikes--;
+      let updatedLikes = likes ;
+      updatedLikes--;
       setLikes(updatedLikes);
       localStorage.setItem(`likes`, updatedLikes);
       setIsLiked(false);
