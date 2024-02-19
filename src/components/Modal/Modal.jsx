@@ -16,9 +16,7 @@ export const Modal = ({ handleCloseModal, active, item }) => {
 
   const handleSaveReview = () => {
     const currentRewyevs= JSON.parse(localStorage.getItem('savedItems')) || []
-    console.log('====================================');
-    console.log(currentRewyevs);
-    console.log('====================================');
+   
     const itemReviews = currentRewyevs.find((itemFromLocalStorage)=> itemFromLocalStorage.id === item.id)?.reviews || []
         console.log('====================================');
 
@@ -26,9 +24,7 @@ export const Modal = ({ handleCloseModal, active, item }) => {
 
     const sacedItemRevuws=[...itemReviews, review]
     const clearedRevuews = currentRewyevs.filter((currentItem)=>currentItem.id!==item.id)
-    console.log('====================================');
-    console.log(currentRewyevs);
-    console.log('====================================');
+    
     const savedItem = { ...item, reviews: sacedItemRevuws };
 
     localStorage.setItem('savedItems', JSON.stringify([...clearedRevuews, savedItem]));

@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   padding: 128px 40px;
-
+  color:  whitesmoke;
   cursor: pointer;
   pointer-events: none;
   overflow-y: auto;
@@ -186,3 +186,26 @@
 .saveReviewButton:hover{
   transform: scale(1.2);
 }
+
+
+.likeBtn,.NextBtn{
+  border-radius: 15px;
+  background: transparent;
+  color: aliceblue;
+  padding: 10px;
+  transition: 0.8s ease-in;
+  cursor: pointer;
+}
+.likeBtn:hover{
+  transform: scale(1.2);
+}
+.isLiked{
+  box-shadow: 2px 1px 20px orchid;
+  border: 1px solid pink;
+  color: pink;
+}
+
+
+.NextBtn:hover{
+    transform: scale(1.2);
+  }

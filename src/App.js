@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductPage from './components/products';
-import ReviewPage from './components/RewPage/RewPage';
+import RandomImagesPage from './components/RandomImagesPage/RandomImagesPage'
 import { BrowserRouter, Route, Link , Routes} from 'react-router-dom';
 import './App.css'
 const App = () => {
@@ -8,19 +8,20 @@ const App = () => {
     <BrowserRouter>
     <div className='App'>
     <ul>
-          <li>
+    <li>
             <Link to="/">Главная</Link>
           </li>
           <li>
-            <Link to="/rew">Отзывы</Link>
+            <Link to="/collection">Просмотренные фото</Link>
           </li>
+          
         </ul>
 
         <hr />
 
         <Routes>
-          <Route path="/" element={<ProductPage />} />
-          <Route path="/rew" element={<ReviewPage />} />
+          <Route path="/" element={<RandomImagesPage />} />
+          <Route path="/collection" element={<ProductPage />} />
         </Routes>
       
     </div>
